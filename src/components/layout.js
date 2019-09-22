@@ -4,7 +4,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
@@ -12,20 +12,22 @@ import NavBar from './nav';
 import Header from "./header";
 // import splash from "../images/img.jpg";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { Container, Col } from "react-bootstrap";
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
+
 const GlobalStyle = createGlobalStyle`
   body {
+    font-family: "Lato";
     background-color: #EEE !important;
-    color: black !important;
+    color: #545454 !important;
     padding-top: 2%;
   }
 
   a:hover {
-    color: #055CBF !important;
+    color: white !important;
   }
 
   .navlink {
@@ -33,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .nav > li > a:hover{
-    background-color:#055CBF !important;
+    background-color:#FFD8B5 !important;
   }
 
   .tab-content > .tab-pane:not(.active),
@@ -42,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
       height: 0;
       overflow-y: hidden;
   } 
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #FFD8B5;
+  }
 `;
 
 // const StyledBackground = styled.div`
@@ -75,7 +81,7 @@ const Layout = ({ children }) => {
         <Container>
           <main>{children}</main>
         </Container>
-        <footer className="text-center">
+        <footer style={{ padding: "10px 0px 10px 0px" }}className="text-center">
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

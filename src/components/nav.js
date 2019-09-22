@@ -29,6 +29,34 @@ const marginRight = {
   marginRight: "10%",
 };
 
+const NavLinksMiddle = [
+  { name: "Story", to: "#story" },
+  { name: "Experience", to: "#experience" },
+  { name: "Projects", to: "#projects" },
+  { name: "Contact", to: "#contact" },
+  { name: "Resume", to: "#resume"},
+];
+
+const NavLinksRight = [
+  { name: <FaGithub size={25}/>, to: "https://github.com/alexung93" },
+  { name: <FaLinkedin size={25}/>, to: "https://www.linkedin.com/in/alexanderung/" },
+  { name: <IoIosMail size={25}/>, to: "mailto:alexung93@gmail.com" },
+];
+
+const NavMiddle = () =>
+  NavLinksMiddle.map((link, index) => (
+    <Nav.Link className="navlink" key={index} href={link.to}>
+      {link.name}
+    </Nav.Link>
+  ));
+
+const NavRight = () =>
+  NavLinksRight.map((link, index) => (
+    <Nav.Link className="navlink" key={index} href={link.to}>
+      {link.name}
+    </Nav.Link>
+  ));
+
 class NavBar extends React.Component {
   render() {
     return (
@@ -40,23 +68,11 @@ class NavBar extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <StyledNavBar.Collapse id="responsive-navbar-nav">
             <Nav color="white" className="ml-auto">
-              <Nav.Link className="navlink" href="#about-me">About Me</Nav.Link>
-              <Nav.Link className="navlink" href="#experience">Experience</Nav.Link>
-              <Nav.Link className="navlink" href="#projects">Projects</Nav.Link>
-              <Nav.Link className="navlink" href="#contact">Contact</Nav.Link>
-              <Nav.Link className="navlink">Resume</Nav.Link>
+              <NavMiddle />
             </Nav>
             <Nav style={marginRight} className="ml-auto">
-              <Nav.Item>
-                <Nav.Link className="navlink" href="https://github.com/alexung93"><FaGithub size={25}/></Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link className="navlink" href="https://www.linkedin.com/in/alexanderung/"><FaLinkedin size={25}/></Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link className="navlink" href="mailto:alexung93@gmail.com"><IoIosMail size={25}/></Nav.Link>
-                </Nav.Item>
-              </Nav>
+              <NavRight />
+            </Nav>
           </StyledNavBar.Collapse>
         </StyledNavBar>
       </Container>

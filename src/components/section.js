@@ -4,18 +4,16 @@ import styled from "styled-components";
 import { Container } from 'react-bootstrap';
 
 const SectionContainer = styled.section`
-	// border-bottom: 1px solid #99ddff;
+	border-bottom: 1px solid #D8D8D8;
 `;
 
 const StyledContainer = styled.div`
-	margin: 2%;
-	padding: 5%;
+	margin: 1.5%;
+	padding: 4%;
 	display: flex;
 	width: 100%;
-	height: 60vh;
 	border-radius: 10px;
-	background-color: #FFFFFF !important;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: inline-block;
 `
 
 const Section = ({ children }) => {

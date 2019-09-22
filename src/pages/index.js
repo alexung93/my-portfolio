@@ -3,17 +3,20 @@ import { Link } from "gatsby";
 import { FaGithub, FaLinkedin, FaMapMarkedAlt, FaApple } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Tab, Row, Col, Nav, Container } from 'react-bootstrap';
+import { FiMenu } from "react-icons/fi";
 
 import Layout from "../components/layout";
 import Image from "../components/image";
 import SEO from "../components/seo";
 import Section from "../components/section";
 import me from "../images/me.jpg";
+import portfolio from "../images/portfolio.jpg";
 import styled from "styled-components";
 
 const StyledH1 = styled.h1`
-  margin-top 10px;
-  margin-bottom 35px;
+  color: #FF9430;
+  margin-top: 10px;
+  margin-bottom: 5px;
 `;
 
 const StyledImg = styled.img`
@@ -23,43 +26,67 @@ const StyledImg = styled.img`
 `;
 
 const StyledDiv = styled.div`
-  text-align:center;
+  width: 100%;
+  text-align: center;
 `;
 
-const LanguagesDiv = styled.div`
-  float: left;
+const Name = styled.h1`
+  font-size: 60px;
+  margin: 0px 0px -10px 0px;
+  color: #FF9430;
 `;
 
-const ToolDiv = styled.div`
-  margin-left: 40%;
+const Title = styled.h2`
+  color: #FF9430;
+  font-size: 30px;
+  margin: 0px;
+`;
+
+const Location = styled.h4`
+  font-size: 20px;
 `;
 
 const NavPadding = styled.div`
   margin-top: 50px;
 `;
 
-const SectionCenterAlign = styled(Section)`
-  justify-content: center;
+const StyledPortfolio = styled.img`
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 200px;
+  margin: 0px 0px 5px 0px;
 `;
+
+const circle = {
+  background: "#545454",
+  width: "50px",
+  height: "50px",
+  borderRadius: "50%",
+  textAlign: "center",
+  lineHeight: "50px",
+  verticalAlign: "middle",
+  padding: "10px",
+};
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Alexander Ung" />
     <NavPadding />
-    <SectionCenterAlign>
-      <StyledDiv>
-      <h1>Alexander Ung</h1>
-      <h2>Software Engineer</h2>
-      <h4><FaMapMarkedAlt /> San Jose, California</h4>
-      <p>A software engineer with 2+ years of experience in Python and SQL. With a Bachelor's Degree in Computer Science from San Jose State University.</p>
-      <a href="https://www.linkedin.com/in/alexanderung/"><FaLinkedin size={32}/></a>
-      <a href="mailto:alexung93@gmail.com"><IoIosMail size={32}/></a>
-      </StyledDiv>
-    </SectionCenterAlign>
+    
+      <Section>
+        <StyledDiv>
+          <Name>Alexander Ung</Name>
+          <Title>Software Engineer</Title>
+          <Location><FaMapMarkedAlt /> San Jose, California</Location>
+          <p>A software engineer with 2+ years of experience in Python and SQL. With a Bachelor's degree in Computer Science from San Jose State University. Currently studying for a Master's degree in Informational Technology with a concentration in Software Development.</p>
+        </StyledDiv>
+ 
+    </Section>
 
-    <div id="about-me" />
+
+    <div id="story" />
     <Section>
-      <StyledH1> About Me </StyledH1>
+
+      <StyledH1> Story Time </StyledH1>
       <StyledImg src={ me } alt="Me" />
       <p>Hi there. I'm Alex, a software engineer based in San Jose, CA.  </p>
 
@@ -67,33 +94,41 @@ const IndexPage = () => (
       <p>Even though I learned Java from school, I picked up Python, Swift, and React. Also got more experience with Flask, Django and Ruby on Rails. I was able to apply my school experience with SQL and learned Tableau on the way, creating visualizations for data. </p>
       <p> I am grateful that I got the experience to meet awesome people that were skilled and learned a lot from them. And I wish to learn a lot on my journey within the field. My current interests are scripting, creating applications and data. </p>
 
-      <LanguagesDiv>
-      <h3>Programming Languages</h3>
-      <ul>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-        <li>Ruby on Rails</li>
-        <li>Flask</li>
-        <li>Tableau</li>
-        <li>HTML & CSS</li>
-        <li>Swift</li>
-      </ul>
-      </LanguagesDiv>
+      <p> A few hobbies of mine is powerlifting, bowling, and playing video-games. I am also a fan of anime and sci-fi things. </p>
 
-      <ToolDiv>
-      <h3>Tools & Frameworks</h3>
-      <ul>
-        <li>Git</li>
-        <li>Tableau</li>
-        <li>Jira</li>
-        <li>REST API</li>
-        <li>Flask</li>
-        <li>Bootstrap</li>
-        <li>React</li>
-      </ul>
-      </ToolDiv>
-        
+      <Row>
+      <Col xs={3}>
+        <div>
+          <h3 style={{ fontSize: "18px", color: "#FF9430" }}>Programming Languages</h3>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>JavaScript</li>
+            <li>Ruby on Rails</li>
+            <li>Flask</li>
+            <li>Tableau</li>
+            <li>HTML & CSS</li>
+            <li>Swift</li>
+          </ul>
+        </div>
+      </Col>
+
+      <Col xs={3}>
+        <div>
+          <h3 style={{ fontSize: "18px", color: "#FF9430"}}>Tools & Frameworks</h3>
+          <ul>
+            <li>Git</li>
+            <li>Tableau</li>
+            <li>Jira</li>
+            <li>REST API</li>
+            <li>Flask</li>
+            <li>Bootstrap</li>
+            <li>React</li>
+          </ul>
+        </div>
+      </Col>
+
+      </Row>
 
     </Section>
 
@@ -106,10 +141,10 @@ const IndexPage = () => (
         <Col xs={3}>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="experience1"><FaApple /> Apple</Nav.Link>
+              <Nav.Link style={{ color: "#545454"}} eventKey="experience1"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="experience2"><FaApple /> Apple</Nav.Link>
+              <Nav.Link style={{ color: "#545454"}} eventKey="experience2"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -118,7 +153,7 @@ const IndexPage = () => (
         <Container>
             <Tab.Content>
               <Tab.Pane eventKey="experience1">
-                <h3>Software Engineer</h3>
+                <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
                 <p style={{ float:"right" }}> Vendor </p>
                 <p>October 2017 - December 2018</p>
                 <li> Created automated scripts and web applications using ​Python ​that supported productivity of  the team </li>
@@ -130,7 +165,7 @@ const IndexPage = () => (
                 <li> Managed and maintained a ​Postgres ​database containing a variety of data </li>
               </Tab.Pane>
               <Tab.Pane eventKey="experience2">
-                <h3>Data Annotation Specialist</h3>
+                <h3 style={{ color: "#FF9430" }}>Data Annotation Specialist</h3>
                 <p style={{ float:"right" }}> Contract </p>
                 <p>October 2016 - October 2017</p>
                 <li> Audited colleagues' data sets </li>
@@ -146,19 +181,28 @@ const IndexPage = () => (
 
     <div id="projects"/>
     <Section>
-    <StyledH1> Projects </StyledH1>
-    <p> WIP </p>
+      <StyledDiv>
+        <StyledH1> Personal Projects </StyledH1>
+        
+        <h3 style={{ fontSize: "18px", color: "#FF9430" }}> Portfolio </h3>
+        <StyledPortfolio src={ portfolio } alt="Portfolio"/>
+        <p>A personalized project to showcase myself and experience, updating it as I learn more about React and Gatsbyjs.</p>
+
+        <a href="https://github.com/alexung93"><FaGithub size={25}/></a>
+      </StyledDiv>
+      
     </Section>
 
     <div id="contact"/>
     <Section>
-    <StyledH1> Contact Me </StyledH1>
-    <p> If you are interested in knowing more about me or just want to connect with me. Click on my  LinkedIn or feel free to e-mail me. </p>
-    <Link href="https://www.linkedin.com/in/alexanderung/"><FaLinkedin size={32}/> </Link>
-    <Link href="mailto:alexung93@gmail.com"><IoIosMail size={32}/></Link>
-    
-
+      <StyledDiv> 
+        <StyledH1> Connect </StyledH1>
+        <p> If you are interested in knowing more about me or just want to connect with me. Visit my LinkedIn or feel free to e-mail me. </p>
+        <a href="https://www.linkedin.com/in/alexanderung/"><FaLinkedin size={32}/> </a>
+        <a href="mailto:alexung93@gmail.com"><IoIosMail size={32}/></a>
+      </StyledDiv>
     </Section>
+
   </Layout>
 )
 

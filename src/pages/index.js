@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "gatsby";
 import { FaGithub, FaLinkedin, FaMapMarkedAlt, FaApple } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Tab, Row, Col, Nav, Container } from 'react-bootstrap';
-import { FiMenu } from "react-icons/fi";
 
 import Layout from "../components/layout";
-import Image from "../components/image";
 import SEO from "../components/seo";
 import Section from "../components/section";
 import me from "../images/me.jpg";
@@ -56,16 +53,14 @@ const StyledPortfolio = styled.img`
   margin: 0px 0px 5px 0px;
 `;
 
-const circle = {
-  background: "#545454",
-  width: "50px",
-  height: "50px",
-  borderRadius: "50%",
-  textAlign: "center",
-  lineHeight: "50px",
-  verticalAlign: "middle",
-  padding: "10px",
+const styleListTitle = {
+  fontSize: "18px", 
+  color: "#FF9430", 
 };
+
+const colorNavLink = {
+  color: "#545454",
+}
 
 const IndexPage = () => (
   <Layout>
@@ -85,7 +80,6 @@ const IndexPage = () => (
 
     <div id="story" />
     <Section>
-
       <StyledH1> Story Time </StyledH1>
       <StyledImg src={ me } alt="Me" />
       <p>Hi there. I'm Alex, a software engineer based in San Jose, CA.  </p>
@@ -99,7 +93,7 @@ const IndexPage = () => (
       <Row>
       <Col xs={3}>
         <div>
-          <h3 style={{ fontSize: "18px", color: "#FF9430" }}>Programming Languages</h3>
+          <h3 style={ styleListTitle }>Programming Languages</h3>
           <ul>
             <li>Python</li>
             <li>SQL</li>
@@ -115,7 +109,7 @@ const IndexPage = () => (
 
       <Col xs={3}>
         <div>
-          <h3 style={{ fontSize: "18px", color: "#FF9430"}}>Tools & Frameworks</h3>
+          <h3 style={ styleListTitle }>Tools & Frameworks</h3>
           <ul>
             <li>Git</li>
             <li>Tableau</li>
@@ -141,10 +135,10 @@ const IndexPage = () => (
         <Col xs={3}>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link style={{ color: "#545454"}} eventKey="experience1"><FaApple /> Apple</Nav.Link>
+              <Nav.Link style={ colorNavLink } eventKey="experience1"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link style={{ color: "#545454"}} eventKey="experience2"><FaApple /> Apple</Nav.Link>
+              <Nav.Link style={ colorNavLink } eventKey="experience2"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -183,11 +177,9 @@ const IndexPage = () => (
     <Section>
       <StyledDiv>
         <StyledH1> Personal Projects </StyledH1>
-        
         <h3 style={{ fontSize: "18px", color: "#FF9430" }}> Portfolio </h3>
         <StyledPortfolio src={ portfolio } alt="Portfolio"/>
         <p>A personalized project to showcase myself and experience, updating it as I learn more about React and Gatsbyjs.</p>
-
         <a href="https://github.com/alexung93"><FaGithub size={25}/></a>
       </StyledDiv>
       

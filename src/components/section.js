@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { Container } from 'react-bootstrap';
 
+/**
+	* Styled section component
+	*/
 const SectionContainer = styled.section`
 	border-bottom: 1px solid #D8D8D8;
 `;
@@ -19,9 +21,9 @@ const StyledContainer = styled.div`
 const Section = ({ children }) => {
 	return (
 		<SectionContainer>
-				<StyledContainer>
-					<main>{children}</main>
-				</StyledContainer>
+			<StyledContainer>
+				<main>{children}</main>
+			</StyledContainer>
 		</SectionContainer>
 		
 	);
@@ -29,6 +31,7 @@ const Section = ({ children }) => {
 }
 
 Section.propTypes = {
+	/** The children that will inherit the style of the section */
   children: PropTypes.node.isRequired,
 }
 

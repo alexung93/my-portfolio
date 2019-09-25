@@ -43,7 +43,7 @@ Here is more information about squashing before committing, [squashing commits](
 ```sh
 git checkout -b feature-x
 ```
-- After the feature/hotfix is ready for merging into the dev branch and have a collaborator review the merge
+- After the feature/hotfix is ready for merging into the dev branch and have a collaborator review the merge for the master branch
 
 ## Roadmap
 - Make the application mobile-friendly
@@ -52,7 +52,7 @@ git checkout -b feature-x
 - Use GatsbyJS features more.
 
 ## Forking
-If you want to fork this repo, please contact me first. I wouldn't mind depending on the use case of the code. Thank you for understanding.
+If you want to fork this repo, please contact me first. I wouldn't mind depending on the use case. Thank you for understanding.
 
 ## Comments
 Feel free to send me a message with constructive criticism or things that you think I should read to improve my site. Thank you!

@@ -3,6 +3,10 @@
   "description": "a personal website",
   "version": "0.1.0",
   "author": "Alexander Ung <alexung93@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexung93/my-portfolio"
+  },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.15.20",
@@ -33,10 +37,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexung93/my-portfolio"
+    "serve": "gatsby serve"
   }
 }

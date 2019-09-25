@@ -30,7 +30,7 @@ To serve the production site use
 gatsby serve
 ```
 
-To read more about the commands that you can use with Gatsby go [here](https://www.gatsbyjs.org/docs/gatsby-cli/)
+To read more about the commands that you can use with Gatsby go [here](https://www.gatsbyjs.org/docs/gatsby-cli/).
 
 ## Workflow
 You can take a look at these articles/posts, I will be trying my best to implement features/hotfixes in this fashion, as it is good practice and keeps clean code. [Github Workflow](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf).

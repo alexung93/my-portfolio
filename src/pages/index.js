@@ -74,9 +74,7 @@ const IndexPage = () => (
           <Location><FaMapMarkedAlt /> San Jose, California</Location>
           <p>A software engineer with 2+ years of experience in Python and SQL. With a Bachelor's degree in Computer Science from San Jose State University. Currently studying for a Master's degree in Informational Technology with a concentration in Software Development.</p>
         </StyledDiv>
- 
     </Section>
-
 
     <div id="story" />
     <Section>
@@ -177,8 +175,10 @@ const IndexPage = () => (
     <Section>
       <StyledDiv>
         <StyledH1> Personal Projects </StyledH1>
-        <h3 style={{ fontSize: "18px", color: "#FF9430" }}> Portfolio </h3>
-        <StyledPortfolio src={ portfolio } alt="Portfolio"/>
+        <a href="https://github.com/alexung93/my-portfolio"> <h3 style={{ fontSize: "18px", color: "#FF9430" }}> Portfolio </h3> </a>
+        <a href="https://github.com/alexung93/my-portfolio">
+          <StyledPortfolio src={ portfolio } alt="Portfolio"/>
+        </a>
         <p>A personalized project to showcase myself and experience, updating it as I learn more about React and Gatsbyjs.</p>
         <a href="https://github.com/alexung93"><FaGithub size={25}/></a>
       </StyledDiv>

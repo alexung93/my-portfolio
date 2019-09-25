@@ -2,7 +2,7 @@
 
 A small personal project to showcase my experience and journey.
 
-1.  Installation
+1.  **Installation**
 
 
 

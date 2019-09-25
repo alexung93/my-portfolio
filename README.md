@@ -33,6 +33,12 @@ gatsby serve
 To read more about the commands that you can use with Gatsby go [here](https://www.gatsbyjs.org/docs/gatsby-cli/)
 
 ###Workflow
+You can take a look at these articles/posts, I will be trying my best to implement features/hotfixes in this fashion, as it is good practice and keeps clean code. [Github Workflow](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf).
+
+Here is more information about squashing before committing [Squashing](https://softwareengineering.stackexchange.com/questions/263164/why-squash-git-commits-for-pull-requests).
+
+- Before creating a new branch, make sure that your code is up to date with the master branch before updating code
+
 - Create a new branch for features and hotfixes seperately and merge it into the dev branch. I.E
 ```sh
 git checkout -b feature-x

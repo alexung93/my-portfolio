@@ -40,3 +40,6 @@ To read more about the commands that you can use with Gatsby go here(https://www
 
 1. **Forking**
 If you want to fork this repo, please contact me first. I wouldn't mind depending on the use case of the code. Thank you for understanding.
+
+1. **Comments**
+Feel free to send me a message with constructive criticism or things that you think I should read to improve my site. Thank you!

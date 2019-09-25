@@ -4,7 +4,7 @@ A small personal project to showcase my experience and journey.
 
 1.  **Installation**
 
-First set up your Gatsby(https://www.gatsbyjs.org/tutorial/) environment.
+First set up your Gatsby (https://www.gatsbyjs.org/tutorial/) environment.
 
 Use the npm command to install the dependencies
 ```sh
@@ -30,16 +30,16 @@ To serve the production site use
 gatsby serve
 ```
 
-To read more about the commands that you can use with Gatsby go here(https://www.gatsbyjs.org/docs/gatsby-cli/)
+To read more about the commands that you can use with Gatsby go here (https://www.gatsbyjs.org/docs/gatsby-cli/)
 
-1.  **Roadmap**
+2.  **Roadmap**
 - Make the application mobile-friendly
 - Add better documentation.
 - Add better practices of React.
 - Use GatsbyJS features more.
 
-1. **Forking**
+3. **Forking**
 If you want to fork this repo, please contact me first. I wouldn't mind depending on the use case of the code. Thank you for understanding.
 
-1. **Comments**
+4. **Comments**
 Feel free to send me a message with constructive criticism or things that you think I should read to improve my site. Thank you!

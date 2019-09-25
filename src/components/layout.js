@@ -61,7 +61,7 @@ const navLinksMiddle = [
   { name: "Experience", to: "#experience" },
   { name: "Projects", to: "#projects" },
   { name: "Contact", to: "#contact" },
-  { name: "Resume", to: "#resume"},
+  { name: "Resume", to: "/alex.ung.resume.pdf"},
 ];
 
 const navLinksRight = [

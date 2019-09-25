@@ -88,7 +88,7 @@ const IndexPage = () => (
       <p>Even though I learned Java from school, I picked up Python, Swift, and React. Also got more experience with Flask, Django and Ruby on Rails. I was able to apply my school experience with SQL and learned Tableau on the way, creating visualizations for data. </p>
       <p> I am grateful that I got the experience to meet awesome people that were skilled and learned a lot from them. And I wish to learn a lot on my journey within the field. My current interests are scripting, creating applications and data. </p>
 
-      <p> A few hobbies of mine is powerlifting, bowling, and playing video-games. I am also a fan of anime and sci-fi things. </p>
+      <p> A few hobbies of mine is powerlifting, bowling, and playing video-games. I have been powerlifting for around 6 years and it has been a fun journey that I enjoy. I casually bowl and for my free-time I enjoy playing video games. I am also a fan of anime and sci-fi things. </p>
 
       <Row>
       <Col xs={3}>

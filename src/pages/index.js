@@ -148,13 +148,16 @@ const IndexPage = () => (
                 <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
                 <p style={{ float:"right" }}> Vendor </p>
                 <p>October 2017 - December 2018</p>
-                <li> Created automated scripts and web applications using ​Python ​that supported productivity of  the team </li>
-                <li> Developed a ​Swift ​application to help parse through and analyze data </li>
-                <li> Built a ​Ruby on Rails​ application that was used by other teams  </li>
-                <li> Refactored ​Python ​code to better tailor future practices </li>
-                <li> Collaborated with other teams/developers to create a ​Flask ​web application for metrics </li>
-                <li> Created ​Tableau ​dashboards to visualize a pipeline </li>
-                <li> Managed and maintained a ​Postgres ​database containing a variety of data </li>
+                <li> Developed proprietary web applications under NDA which ingested data daily into a PostgreSQL database
+and provided summary statistics for use by technical and non-technical team leads </li>
+                <li> Developed a Swift application which ingested data and provided summary statistics for use by technical
+and non-technical team leads </li>
+                <li> Built and shipped a Ruby on Rails application that would allow the users to upload files and allow admins
+to review the files and give feedback utilizing a Postgres backend  </li>
+                <li> Refactored Python code that was used to validate data to fit future JSON data formats </li>
+                <li> Developed a Flask web application used to visualize data for a pipeline, ingested data from utilizing the Jira
+API and other databases using Python and Tableau </li>
+                <li> Managed and maintained a Postgres database containing a variety of data </li>
               </Tab.Pane>
               <Tab.Pane eventKey="experience2">
                 <h3 style={{ color: "#FF9430" }}>Data Annotation Specialist</h3>

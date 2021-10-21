@@ -136,7 +136,13 @@ const IndexPage = () => (
               <Nav.Link style={ colorNavLink } eventKey="experience1"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link style={ colorNavLink } eventKey="experience2"><FaApple /> Apple</Nav.Link>
+              <Nav.Link style={ colorNavLink } eventKey="experience2">Facebook</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link style={ colorNavLink } eventKey="experience3"><FaApple /> Apple</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link style={ colorNavLink } eventKey="experience4"><FaApple /> Apple</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -145,6 +151,26 @@ const IndexPage = () => (
         <Container>
             <Tab.Content>
               <Tab.Pane eventKey="experience1">
+                <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
+                <p style={{ float:"right" }}> Vendor </p>
+                <p>June 2021 - Present</p>
+                <li> Monitor existing services and production code to ensure they are running correctly </li>
+                <li> Design and develop tools using Python to fulfill customer requirements </li>
+                <li> Create and update documentation for tools </li>
+                <li> Refactored Python code that was used to validate data to fit future JSON data formats </li>
+                <li> Optimize and standardize current production tools </li>
+              </Tab.Pane>
+              <Tab.Pane eventKey="experience2">
+                <h3 style={{ color: "#FF9430" }}>Automation Engineer</h3>
+                <p style={{ float:"right" }}> Contract </p>
+                <p>October 2019 - June 2021</p>
+                <li> Refactored test automation scripts to new practices </li>
+                <li> Triaged and maintained automation devices/tests to ensure continuous build integration </li>
+                <li> Collaborated with other teams to ensure raised issues were recognized/solved  </li>
+                <li> Created and collaborated new tools to develop better methods of scalability within the team </li>
+                <li> Created and updated documentation on how Facebook internal tools can be integrated with the team </li>
+              </Tab.Pane>
+              <Tab.Pane eventKey="experience3">
                 <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
                 <p style={{ float:"right" }}> Vendor </p>
                 <p>October 2017 - December 2018</p>
@@ -159,7 +185,7 @@ to review the files and give feedback utilizing a Postgres backend  </li>
 API and other databases using Python and Tableau </li>
                 <li> Managed and maintained a Postgres database containing a variety of data </li>
               </Tab.Pane>
-              <Tab.Pane eventKey="experience2">
+              <Tab.Pane eventKey="experience4">
                 <h3 style={{ color: "#FF9430" }}>Data Annotation Specialist</h3>
                 <p style={{ float:"right" }}> Contract </p>
                 <p>October 2016 - October 2017</p>

@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Section from "../components/section";
 import me from "../images/me.jpg";
-import portfolio from "../images/portfolio.jpg";
 import styled from "styled-components";
 
 const StyledH1 = styled.h1`
@@ -72,21 +71,20 @@ const IndexPage = () => (
           <Name>Alexander Ung</Name>
           <Title>Software Engineer</Title>
           <Location><FaMapMarkedAlt /> San Jose, California</Location>
-          <p>A software engineer with 2+ years of experience in Python and SQL. With a Bachelor's degree in Computer Science from San Jose State University. Currently studying for a Master's degree in Informational Technology with a concentration in Software Development.</p>
+          <p>A dedicated software engineer with over 7 years of experience specializing in Python and SQL. I hold a Master’s degree in Information Technology with a concentration in Software Development from Southern New Hampshire University, complemented by a Bachelor’s degree in Computer Science from San Jose State University.</p>
         </StyledDiv>
     </Section>
 
     <div id="story" />
     <Section>
-      <StyledH1> Story Time </StyledH1>
+      <StyledH1> About Me </StyledH1>
       <StyledImg src={ me } alt="Me" />
-      <p>Hi there. I'm Alex, a software engineer based in San Jose, CA.  </p>
-
-      <p>After graduating from San Jose State University. I was contracted at Apple for data entry work. Shortly after a couple months, I was promoted to a software engineer within the same project due to my background in computer science. </p>
-      <p>Even though I learned Java from school, I picked up Python, Swift, and React. Also got more experience with Flask, Django and Ruby on Rails. I was able to apply my school experience with SQL and learned Tableau on the way, creating visualizations for data. </p>
-      <p> I am grateful that I got the experience to meet awesome people that were skilled and learned a lot from them. And I wish to learn a lot on my journey within the field. My current interests are scripting, creating applications and data. </p>
-
-      <p> A few hobbies of mine is powerlifting, bowling, and playing video-games. I have been powerlifting for around 6 years and it has been a fun journey that I enjoy. I casually bowl and for my free-time I enjoy playing video games. I am also a fan of anime and sci-fi things. </p>
+      <p>Hello, I'm Alex, a software engineer based in San Jose, CA.</p>
+      <p>After earning my degree in Computer Science from San Jose State University, I began my career at Apple as a data entry contractor. Within a few months, I was promoted to a software engineering role on the same project, leveraging my academic background and passion for technology.</p>
+      <p>I later gained valuable experience as an Automation Engineer at Facebook, where I refactored test automation scripts, managed automation devices, and streamlined testing processes. Following that, I rejoined Apple as part of the email marketing team. There, I monitored and maintained production services to ensure reliability, developed customer-focused tools in Python, authored comprehensive documentation, and optimized production tools to improve scalability and efficiency. My role also involved writing and reviewing SQL queries, conducting quality assurance, and collaborating cross-functionally to implement best practices and enhance workflows.</p>
+      <p>While my formal education focused on Java, I expanded my technical skill set by learning Python, Swift, and React, along with hands-on experience using frameworks such as Flask, Django, and Ruby on Rails. Additionally, I honed my data visualization skills with SQL and Tableau to deliver impactful insights.</p>
+      <p>I’m immensely grateful for the opportunities I’ve had to collaborate with talented individuals who have inspired and guided me. As I continue my journey in software engineering, I’m eager to further develop my skills and contribute to innovative projects. My current interests include scripting, application development, and data visualization.</p>
+      <p>Outside of work, I’m passionate about powerlifting, bowling, and playing video games. Recently, I’ve developed a love for pickleball and plan to play competitively. Additionally, I’m an avid fan of anime and science fiction, which fuel my imagination and creativity.</p>
 
       <Row>
       <Col xs={3}>
@@ -150,48 +148,46 @@ const IndexPage = () => (
         <Col xs={9}>
         <Container>
             <Tab.Content>
-              <Tab.Pane eventKey="experience1">
+            <Tab.Pane eventKey="experience1">
                 <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
                 <p style={{ float:"right" }}> Vendor </p>
-                <p>June 2021 - Present</p>
-                <li> Monitor existing services and production code to ensure they are running correctly </li>
-                <li> Design and develop tools using Python to fulfill customer requirements </li>
-                <li> Create and update documentation for tools </li>
-                <li> Refactored Python code that was used to validate data to fit future JSON data formats </li>
-                <li> Optimize and standardize current production tools </li>
+                <p>June 2021 - January 2025</p>
+                <li> Monitored and maintained existing services and production code to ensure optimal functionality and reliability in live environments.</li>
+                <li> Designed and developed customer-centric tools using Python, addressing unique requirements and enhancing overall user satisfaction.</li>
+                <li> Authored and updated detailed documentation for tools, ensuring clarity and ease of use for end-users and internal teams.</li>
+                <li> Optimized and standardized production tools, reducing operational inefficiencies and improving scalability.</li>
+                <li> Conducted quality assurance of SQL code to ensure accuracy, performance, and adherence to best practices.</li>
+                <li> Wrote SQL queries tailored to meet end-user requirements, enabling data-driven decision-making and streamlined workflows.</li>
+                <li> Collaborated cross-functionally with teams to implement best practices, driving consistency and alignment across workflows.</li>
+                <li> Conducted rigorous testing and debugging of tools and services to maintain high-quality standards and minimize downtime</li>
+
               </Tab.Pane>
               <Tab.Pane eventKey="experience2">
                 <h3 style={{ color: "#FF9430" }}>Automation Engineer</h3>
                 <p style={{ float:"right" }}> Contract </p>
                 <p>October 2019 - June 2021</p>
-                <li> Refactored test automation scripts to new practices </li>
-                <li> Triaged and maintained automation devices/tests to ensure continuous build integration </li>
-                <li> Collaborated with other teams to ensure raised issues were recognized/solved  </li>
-                <li> Created and collaborated new tools to develop better methods of scalability within the team </li>
-                <li> Created and updated documentation on how Facebook internal tools can be integrated with the team </li>
+                <li> Refactored test automation scripts to align with best practices, improving efficiency and maintainability.</li>
+                <li> Managed automation devices and tests, ensuring seamless continuous integration and build stability.</li>
+                <li> Collaborated with cross-functional teams to identify and resolve issues, enhancing workflows.</li>
+                <li> Designed and implemented tools to improve scalability and drive operational efficiency.</li>
+                <li> Authored and updated documentation to streamline integration of Facebook internal tools across teams.</li>
               </Tab.Pane>
               <Tab.Pane eventKey="experience3">
                 <h3 style={{ color: "#FF9430" }}>Software Engineer</h3>
                 <p style={{ float:"right" }}> Vendor </p>
                 <p>October 2017 - December 2018</p>
-                <li> Developed proprietary web applications under NDA which ingested data daily into a PostgreSQL database
-and provided summary statistics for use by technical and non-technical team leads </li>
-                <li> Developed a Swift application which ingested data and provided summary statistics for use by technical
-and non-technical team leads </li>
-                <li> Built and shipped a Ruby on Rails application that would allow the users to upload files and allow admins
-to review the files and give feedback utilizing a Postgres backend  </li>
-                <li> Refactored Python code that was used to validate data to fit future JSON data formats </li>
-                <li> Developed a Flask web application used to visualize data for a pipeline, ingested data from utilizing the Jira
-API and other databases using Python and Tableau </li>
-                <li> Managed and maintained a Postgres database containing a variety of data </li>
+                <li> Developed proprietary web applications to ingest data into PostgreSQL and provide statistics for team leads.</li>
+                <li> Built Swift and Ruby on Rails applications to streamline data validation and document review workflows.</li>
+                <li> Refactored Python scripts for future JSON support, automating tasks and increasing productivity.</li>
+                <li> Created a Flask web app integrating Python, Tableau, and Jira API for pipeline data visualization. </li>
+                <li> Led team meetings to ensure progress, resolve blockers, and meet project deadlines.</li>
               </Tab.Pane>
               <Tab.Pane eventKey="experience4">
                 <h3 style={{ color: "#FF9430" }}>Data Annotation Specialist</h3>
                 <p style={{ float:"right" }}> Contract </p>
                 <p>October 2016 - October 2017</p>
-                <li> Audited colleagues' data sets </li>
-                <li> Trained other colleagues on application that was being used</li>
-                <li> Provided feedback/bug reports for the application</li>
+                <li> Conducted audits and mentored colleagues to ensure data quality and integrity.</li>
+                <li> Provided constructive feedback and generated detailed bug reports for developers.</li>
               </Tab.Pane>
             </Tab.Content>
             </Container>
@@ -206,7 +202,6 @@ API and other databases using Python and Tableau </li>
         <StyledH1> Personal Projects </StyledH1>
         <a href="https://github.com/alexung93/my-portfolio"> <h3 style={{ fontSize: "18px", color: "#FF9430" }}> Portfolio </h3> </a>
         <a href="https://github.com/alexung93/my-portfolio">
-          <StyledPortfolio src={ portfolio } alt="Portfolio"/>
         </a>
         <p>A personalized project to showcase myself and experience, updating it as I learn more about React and Gatsbyjs.</p>
         <a href="https://github.com/alexung93"><FaGithub size={25}/></a>

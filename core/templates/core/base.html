@@ -1,0 +1,79 @@
+{% load static %}
+{% load icons %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of {{ profile.name }}">
+    <title>{% block title %}{{ profile.name }} — {{ profile.title }}{% endblock %}</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3EAU%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="{% static 'js/reveal.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body class="flex min-h-screen flex-col">
+    <div aria-hidden="true" class="aurora pointer-events-none fixed inset-0 overflow-hidden">
+        <div class="aurora-orb aurora-orb-1"></div>
+        <div class="aurora-orb aurora-orb-2"></div>
+        <div class="aurora-orb aurora-orb-3"></div>
+    </div>
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+        <nav class="container-page flex items-center justify-between py-4">
+            <a href="{% url 'home' %}" class="inline-flex items-center gap-2 text-lg font-bold tracking-tight text-white">
+                <span class="flex h-6 w-6 items-center justify-center rounded-md bg-accent/10 text-accent">
+                    <span aria-hidden="true" class="text-xs font-bold leading-none">&lt;/&gt;</span>
+                </span>
+                {{ profile.name }}
+            </a>
+            <div class="flex items-center gap-4 sm:gap-6">
+                <a href="#about" aria-label="About" class="group flex items-center gap-2 text-slate-400 transition-colors duration-700 hover:text-white">
+                    {% icon "user" cls="h-5 w-5 shrink-0 transition-transform duration-700 group-hover:scale-110" %}
+                    <span class="max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-40 group-hover:opacity-100">About</span>
+                </a>
+                <a href="#education" aria-label="Education" class="group flex items-center gap-2 text-slate-400 transition-colors duration-700 hover:text-white">
+                    {% icon "graduation-cap" cls="h-5 w-5 shrink-0 transition-transform duration-700 group-hover:scale-110" %}
+                    <span class="max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-40 group-hover:opacity-100">Education</span>
+                </a>
+                <a href="#experience" aria-label="Experience" class="group flex items-center gap-2 text-slate-400 transition-colors duration-700 hover:text-white">
+                    {% icon "briefcase" cls="h-5 w-5 shrink-0 transition-transform duration-700 group-hover:scale-110" %}
+                    <span class="max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-40 group-hover:opacity-100">Experience</span>
+                </a>
+                <a href="#skills" aria-label="Skills" class="group flex items-center gap-2 text-slate-400 transition-colors duration-700 hover:text-white">
+                    {% icon "code" cls="h-5 w-5 shrink-0 transition-transform duration-700 group-hover:scale-110" %}
+                    <span class="max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-40 group-hover:opacity-100">Skills</span>
+                </a>
+                <a href="#projects" aria-label="Projects" class="group flex items-center gap-2 text-slate-400 transition-colors duration-700 hover:text-white">
+                    {% icon "folder" cls="h-5 w-5 shrink-0 transition-transform duration-700 group-hover:scale-110" %}
+                    <span class="max-w-0 overflow-hidden whitespace-nowrap text-sm font-medium opacity-0 transition-all duration-700 ease-in-out group-hover:max-w-40 group-hover:opacity-100">Projects</span>
+                </a>
+                {% for social in profile.socials %}
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }}" class="text-slate-400 transition-colors hover:text-white">
+                    {% icon social.icon cls="h-5 w-5" %}
+                </a>
+                {% endfor %}
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-1">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="border-t border-white/5 py-8">
+        <div class="container-page flex flex-col items-center justify-between gap-3 text-sm text-slate-500 sm:flex-row">
+            <p>© {% now "Y" %} {{ profile.name }}</p>
+            <div class="flex items-center gap-5">
+                {% for social in profile.socials %}
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }}" class="text-slate-500 transition-colors hover:text-white">
+                    {% icon social.icon cls="h-4 w-4" %}
+                </a>
+                {% endfor %}
+                <span>{{ profile.location }}</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

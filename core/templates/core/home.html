@@ -1,0 +1,133 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load icons %}
+
+{% block title %}{{ profile.name }} — {{ profile.title }}{% endblock %}
+
+{% block content %}
+<section class="container-page flex min-h-[75vh] flex-col justify-center pt-24 pb-10">
+    <div class="relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-slate-900/80 via-slate-900/50 to-slate-900/60 p-8 sm:p-12">
+        <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-accent/20 blur-3xl"></div>
+        <div class="relative grid items-center gap-10 sm:grid-cols-[1fr_auto]">
+            <div class="max-w-3xl">
+                <p class="mb-4 text-sm font-medium uppercase tracking-widest text-accent">{{ profile.location }}</p>
+                <h1 class="text-4xl font-bold leading-tight tracking-tight text-white sm:text-6xl">
+                    Hi, I'm <span class="bg-gradient-to-r from-accent via-cyan-400 to-accent-soft bg-clip-text text-transparent">{{ profile.name }}</span> 👋
+                </h1>
+                <h2 class="mt-4 text-2xl font-semibold text-slate-200 sm:text-3xl">{{ profile.title }}</h2>
+                <p class="mt-6 max-w-2xl text-lg text-slate-400">{{ profile.tagline }}</p>
+                {% comment %}Temporarily removed: View projects button
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <a href="#projects" class="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-600">
+                        View projects
+                    </a>
+                </div>
+                {% endcomment %}
+            </div>
+            <img src="{% static 'images/profile.jpeg' %}" alt="{{ profile.name }}" class="aspect-square w-full max-w-xs rounded-2xl border border-white/10 object-cover sm:w-64">
+        </div>
+    </div>
+</section>
+
+<section id="about" class="container-page py-10">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "user" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>About</span>
+    </h2>
+    <div class="max-w-3xl space-y-5 border-l-2 border-white/10 pl-6 text-lg leading-relaxed text-slate-400">
+        {% for paragraph in profile.about_paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="education" class="container-page py-10">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "graduation-cap" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>Education</span>
+    </h2>
+    <div class="space-y-6">
+        {% for edu in education %}
+        <div class="timeline-item border-l-2 border-white/10 pl-6">
+            <h3 class="text-lg font-semibold text-white">{{ edu.degree }}</h3>
+            <p class="mt-1 text-sm font-medium text-accent">{{ edu.school }}</p>
+            <span class="mt-2 inline-block text-sm text-slate-500">{{ edu.year }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="experience" class="container-page py-10">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "briefcase" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>Experience</span>
+    </h2>
+    <div class="space-y-10">
+        {% for job in experience %}
+        <div class="timeline-item border-l-2 border-white/10 pl-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <h3 class="text-xl font-semibold text-white">{{ job.role }}</h3>
+                <span class="text-sm text-slate-500">{{ job.period }}</span>
+            </div>
+            <p class="mt-1 text-sm font-medium text-accent">{% if job.company %}{{ job.company }}{% endif %}</p>
+            <ul class="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-400">
+                {% for point in job.points %}
+                <li>{{ point }}</li>
+                {% endfor %}
+            </ul>
+            {% if job.tags %}
+            <div class="mt-5 flex flex-wrap gap-2">
+                {% for tag in job.tags %}
+                <span class="rounded-full bg-white/5 px-3 py-1 text-xs text-slate-300">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="skills" class="container-page py-10">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "code" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>Skills</span>
+    </h2>
+    <div class="grid gap-8 sm:grid-cols-3">
+        {% for group in skills %}
+        <div class="rounded-xl border border-white/5 bg-slate-900/60 p-6">
+            <h3 class="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">{{ group.category }}</h3>
+            <div class="flex flex-wrap gap-2">
+                {% for item in group.items %}
+                <span class="rounded-full bg-white/5 px-3 py-1 text-sm text-slate-300">{{ item }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="projects" class="container-page py-10">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "folder" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>Projects</span>
+    </h2>
+    <div class="flex items-center gap-3 border-l-2 border-white/10 pl-6 text-sm font-semibold text-slate-400">
+        {% icon "hammer" cls="h-4 w-4 shrink-0" %}
+        <span>Work in progress</span>
+    </div>
+</section>
+
+<section id="contact" class="container-page py-10 pb-16">
+    <h2 class="section-title flex items-center gap-3">
+        {% icon "send" cls="h-7 w-7 shrink-0 text-accent" %}
+        <span>Get in touch</span>
+    </h2>
+    <p class="max-w-2xl text-slate-400">Interested in working together or just want to say hi?</p>
+    <p class="mt-4">
+        <a href="mailto:{{ profile.email }}" class="inline-flex items-center gap-2 font-semibold text-accent-soft hover:underline">
+            {% icon "mail" cls="inline-block h-4 w-4 shrink-0" %}
+            {{ profile.email }}
+        </a>
+    </p>
+</section>
+{% endblock %}

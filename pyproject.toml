@@ -1,0 +1,17 @@
+[project]
+name = "my-portfolio"
+version = "0.1.0"
+description = "Personal portfolio site built with Django and Tailwind CSS"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "django>=6.1",
+    "python-dotenv>=1.2.2",
+    "whitenoise>=6.9",
+]
+
+[tool.vercel]
+entrypoint = "portfolio.wsgi:application"
+
+[tool.vercel.scripts]
+build = "python build.py"
